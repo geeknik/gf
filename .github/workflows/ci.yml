@@ -72,8 +72,10 @@ jobs:
           go-version: '1.24'
 
       - name: Build
-        run: go build -v -o gf ./cmd/gf
+        run: |
+          go build -v -o bin/gf ./cmd/gf
+          ls -la bin/
 
       - name: Test binary
         run: |
-          ./gf -list || true
+          ./bin/gf -list || true
