@@ -1,7 +1,9 @@
 # Binaries
-gf
-main
+/gf
+/main
 *.exe
+/bin/
+/dist/
 
 # Go
 *.sum
