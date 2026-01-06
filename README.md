@@ -46,7 +46,8 @@ To help reduce pattern length and complexity a little, you can specify a list of
 }
 ```
 
-There are some more example pattern files in the `examples` directory.
+There are some more example pattern files in the `examples` directory. But if you really want some good
+patterns, check out our [Gf-Patterns](https://github.com/geeknik/gf-patterns) repo.
 
 You can use the `-save` flag to create pattern files from the command line:
 
