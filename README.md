@@ -105,26 +105,50 @@ In order to utilize a different engine, add `engine: <other tool>` to the releva
 
 ## Install
 
+### Go 1.16+ (recommended)
+
 If you've got Go installed and configured you can install `gf` with:
 
 ```
-▶ go get -u github.com/tomnomnom/gf
+▶ go install github.com/geeknik/gf@latest
 ```
 
-If you've installed using `go get`, you can enable auto-completion to your `.bashrc` like this:
+This will install the binary to `$GOBIN` (default: `~/go/bin`) or `$GOPATH/bin`.
+
+### Using make
 
 ```
-▶ echo 'source $GOPATH/src/github.com/tomnomnom/gf/gf-completion.bash' >> ~/.bashrc
+▶ git clone https://github.com/geeknik/gf
+▶ cd gf
+▶ make install
+```
+
+### From releases
+
+Download the appropriate binary from the [releases page](https://github.com/geeknik/gf/releases).
+
+### Setting up auto-completion
+
+If you've installed using `go install`, you can enable auto-completion in your `.bashrc` like this:
+
+```
+▶ echo 'source ~/path/to/gf/gf-completion.bash' >> ~/.bashrc
 ```
 
 Note that you'll have to restart your terminal, or run `source ~/.bashrc` for the changes to
 take effect.
 
-To get started quickly, you can copy the example pattern files to `~/.gf` like this:
+To get started quickly, you can copy the example pattern files to `~/.config/gf` (or `~/.gf` as fallback):
 
 ```
-▶ cp -r $GOPATH/src/github.com/tomnomnom/gf/examples ~/.gf
+▶ cp -r examples/* ~/.config/gf/
 ```
+
+### XDG Base Directory Support
+
+`gf` follows the XDG Base Directory specification. Pattern files are stored in:
+- `~/.config/gf/` (preferred, XDG standard)
+- `~/.gf/` (fallback for compatibility)
 
 My personal patterns that I've included as examples might not be very useful to you, but hopefully
 they're still a reasonable point of reference.
