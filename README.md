@@ -111,7 +111,7 @@ In order to utilize a different engine, add `engine: <other tool>` to the releva
 If you've got Go installed and configured you can install `gf` with:
 
 ```
-▶ go install github.com/geeknik/gf@latest
+▶ go install github.com/geeknik/gf/cmd/gf@latest
 ```
 
 This will install the binary to `$GOBIN` (default: `~/go/bin`) or `$GOPATH/bin`.
